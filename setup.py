@@ -9,7 +9,7 @@ from pybind11.setup_helpers import Pybind11Extension
 
 long_description = """
 FFHT-non-official
-==========
+=================
 
 This is a description of my package using reStructuredText syntax.
 
