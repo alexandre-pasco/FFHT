@@ -1,11 +1,11 @@
 import sys
 from pybind11.setup_helpers import Pybind11Extension
 
-try:
-    import pypandoc
-    long_description = pypandoc.convert('README.md', 'rst')
-except(IOError, ImportError):
-    long_description = open('README.md').read()
+#try:
+#    import pypandoc
+#    long_description = pypandoc.convert('README.md', 'rst')
+#except(IOError, ImportError):
+#    long_description = open('README.md').read()
 
 try:
     from setuptools import setup, find_packages, Extension
@@ -34,7 +34,7 @@ setup(name='FFHT',
       author_email='falconn.lib@gmail.com',
       url='https://github.com/FALCONN-LIB/FFHT',
       description='Fast implementation of the Fast Hadamard Transform (FHT)',
-      long_description=long_description,
+      long_description=None#long_description,
       license='MIT',
       keywords='fast Fourier Hadamard transform butterfly',
       packages=find_packages(),
