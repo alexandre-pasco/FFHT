@@ -24,6 +24,7 @@ module = Extension('ffht',
                                        '-Wshadow', '-Wpointer-arith', '-Wcast-qual',
                                        '-Wstrict-prototypes', '-Wmissing-prototypes',
                                        '-std=c++11', '-fopenmp'],
+                   extra_link_args=['-fopenmp'],
                    include_dirs=[np.get_include()] + ["pybind11/include"])
 
 setup(name='FFHT',
