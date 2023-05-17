@@ -1,4 +1,5 @@
 import sys
+from pybind11.setup_helpers import Pybind11Extension
 
 try:
     import pypandoc
@@ -18,7 +19,7 @@ except ImportError:
     sys.stderr.write('NumPy not found!\n')
     raise
 
-module = Extension('ffht',
+module = Pybind11Extension('ffht',
                    sources=["fht-pybind11.cpp", "fht.c", "fast_copy.c"],
                    extra_compile_args=['-march=native', '-O3', '-Wall', '-Wextra', '-pedantic',
                                        '-Wshadow', '-Wpointer-arith', '-Wcast-qual',
