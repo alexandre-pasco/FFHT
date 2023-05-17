@@ -27,14 +27,12 @@ jobs:
           pip install --upgrade setuptools wheel
           pip install -r requirements.txt
 
-      - name: Build and publish package
+      - name: Build package
         run: |
           python setup.py sdist bdist_wheel
-          python -m pip install --upgrade twine
-          twine upload --username ${{ secrets.PYPI_USERNAME }} --password ${{ secrets.PYPI_PASSWORD }} dist/*
-          
-      #- name: Publish to PyPI
-      #  uses: pypa/gh-action-pypi-publish@v1
-      #  with:
-      #    username: __token__
-      #    password: ${{ secrets.PYPI_API_TOKEN }}
+      
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1
+        with:
+          username: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
