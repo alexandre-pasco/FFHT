@@ -7,6 +7,34 @@ from pybind11.setup_helpers import Pybind11Extension
 #except(IOError, ImportError):
 #    long_description = open('README.md').read()
 
+long_description = """
+FFHT-non-official
+==========
+
+This is a description of my package using reStructuredText syntax.
+
+Installation
+------------
+
+To install the package, use pip:
+
+.. code-block:: bash
+
+    pip install FFHT-non-official
+
+Usage
+-----
+
+Here's an example of how to use the package:
+
+.. code-block:: python
+
+    import ffht-non-official
+
+    # code example
+
+"""
+
 try:
     from setuptools import setup, find_packages, Extension
 except ImportError:
