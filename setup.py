@@ -56,7 +56,7 @@ module = Pybind11Extension('ffht',
                    extra_link_args=['-fopenmp'],
                    include_dirs=[np.get_include()] + ["pybind11/include"])
 
-setup(name='FFHT',
+setup(name='FFHT-non-official',
       version='1.1',
       author='Ilya Razenshteyn, Ludwig Schmidt',
       author_email='falconn.lib@gmail.com',
