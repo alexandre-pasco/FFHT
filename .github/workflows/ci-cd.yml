@@ -31,7 +31,7 @@ jobs:
         run: |
           python setup.py sdist bdist_wheel
           python -m pip install --upgrade twine
-          twine upload dist/*
+          twine upload --username ${{ secrets.PYPI_USERNAME }} --password ${{ secrets.PYPI_PASSWORD }} dist/*
           
       #- name: Publish to PyPI
       #  uses: pypa/gh-action-pypi-publish@v1
