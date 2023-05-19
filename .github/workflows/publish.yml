@@ -3,7 +3,10 @@ name: Publish to PyPI
 on:
   release:
     types: [created]
-
+  # to remove after
+  push:
+      branches:
+        - main
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
