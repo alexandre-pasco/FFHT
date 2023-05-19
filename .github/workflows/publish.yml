@@ -6,7 +6,7 @@ on:
   # to remove after
   push:
       branches:
-        - main
+        - master
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
