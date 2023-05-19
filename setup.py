@@ -48,7 +48,7 @@ except ImportError:
     raise
 
 module = Pybind11Extension('ffht',
-                   sources=["fht-pybind11.cpp", "fht.c", "fast_copy.c", "fast_copy.h"],
+                   sources=["fht-pybind11.cpp", "fht.c", "fast_copy.c"],
                    extra_compile_args=['-march=native', '-O3', '-Wall', '-Wextra', '-pedantic',
                                        '-Wshadow', '-Wpointer-arith', '-Wcast-qual',
                                        '-Wstrict-prototypes', '-Wmissing-prototypes',
