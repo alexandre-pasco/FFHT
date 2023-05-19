@@ -54,11 +54,10 @@ module = Pybind11Extension('ffht',
                                        '-Wstrict-prototypes', '-Wmissing-prototypes',
                                        '-std=c++11', '-fopenmp'],
                    extra_link_args=['-fopenmp'],
-                   depends=['fast_copy.h', 'fht.h'],
                    include_dirs=[np.get_include()] + ["pybind11/include"])
 
 setup(name='FFHT-non-official',
-      version='1.2.6',
+      version='1.2.7',
       author='Ilya Razenshteyn, Ludwig Schmidt',
       author_email='falconn.lib@gmail.com',
       url='https://github.com/FALCONN-LIB/FFHT',
