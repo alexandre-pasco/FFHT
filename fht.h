@@ -2,6 +2,7 @@
 #define _FHT_H_
 #include <string.h>
 #include <stdlib.h>
+#include "fast_copy.h"
 
 #ifdef __cplusplus
 extern "C" {
