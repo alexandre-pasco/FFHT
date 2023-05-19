@@ -28,7 +28,7 @@ jobs:
       
       - name: Build manylinux wheels
         run: |
-          pip install --upgrade setuptools wheel
+          pip install --upgrade setuptools wheel pybind11
           docker run --rm -v $(pwd):/io quay.io/pypa/manylinux2014_x86_64 /bin/bash -c "cd /io && python setup.py bdist_wheel"
       
       - name: Publish to PyPI
